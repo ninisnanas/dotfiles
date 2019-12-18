@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$PATH:/usr/local/go/bin
+# export GOPATH=$HOME/go
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/fushar/.oh-my-zsh"
@@ -115,3 +117,11 @@ export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
