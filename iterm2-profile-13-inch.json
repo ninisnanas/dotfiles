@@ -80,7 +80,7 @@
         "Green Component" : 0.58039215686274515,
         "Red Component" : 0.51372549019607838
       },
-      "Working Directory" : "\/Users\/fushar",
+      "Working Directory" : "\/Users\/mapan",
       "Blinking Cursor" : false,
       "Disable Window Resizing" : true,
       "Sync Title" : false,
@@ -106,7 +106,7 @@
       },
       "Custom Command" : "No",
       "ASCII Anti Aliased" : true,
-      "Non Ascii Font" : "HackNerdFontComplete-Regular 13",
+      "Non Ascii Font" : "HackNerdFontComplete-Regular 11",
       "Vertical Spacing" : 1.256019390060241,
       "Use Bold Font" : true,
       "Option Key Sends" : 0,
@@ -364,7 +364,7 @@
         "Green Component" : 0.54509803921568623,
         "Red Component" : 0.14901960784313725
       },
-      "Normal Font" : "HackNerdFontComplete-Regular 13",
+      "Normal Font" : "HackNerdFontComplete-Regular 11",
       "Ansi 5 Color" : {
         "Blue Component" : 0.50980392156862742,
         "Color Space" : "sRGB",
