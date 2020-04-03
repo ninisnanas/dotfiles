@@ -2,6 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
+export GOPRIVATE=source.golabs.io
+export PATH=$PATH:$GOPATH/bin:/usr/local/bin/idea
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -125,3 +128,5 @@ fi
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export LC_ALL=en_US.UTF-8
