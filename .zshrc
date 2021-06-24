@@ -2,9 +2,11 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
-export GOPRIVATE=source.golabs.io
+export GOPRIVATE=source.golabs.io,gitlab.com
 export PATH=$PATH:$GOPATH/bin:/usr/local/bin/idea
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home
+export PATH=$PATH:~/.rbenv/shims
+export PATH=$PATH:/Users/mapan/go/src/github.com/grpc/cmake/build
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -136,3 +138,19 @@ if [ -f '/Users/mapan/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/mapan/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mapan/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval "$(rbenv init -)"
+
+connect-vpn () {
+   execute_script="$HOME/.scripts/gojek-vpn.sh"
+   if [ $# -lt 1 ]; then
+     echo "Usage: $0 [VPN indexes]"
+     echo "Eg. $0 0 1 2"
+     echo "\n"
+     bash ${execute_script} | sed -n -e '/List/,$p'
+   else
+     bash ${execute_script} $@ "$(oathtool --totp -b pcbpvo3c6yogyau4p5fkwmvqmit3wfzm)"
+   fi
+ }
+
+alias pull_all="find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;"
